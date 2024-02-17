@@ -1,0 +1,100 @@
+[
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "convolve",
+        "importPath": "scipy.ndimage",
+        "description": "scipy.ndimage",
+        "isExtraImport": true,
+        "detail": "scipy.ndimage",
+        "documentation": {}
+    },
+    {
+        "label": "gaussian_kernel",
+        "kind": 2,
+        "importPath": "guassianFilter",
+        "description": "guassianFilter",
+        "peekOfCode": "def gaussian_kernel(size, sigma):\n    \"\"\"Generate a 2D Gaussian kernel.\"\"\"\n    kernel = np.fromfunction(\n        lambda x, y: (1 / (2 * np.pi * sigma**2))\n        * np.exp(-((x - size // 2) ** 2 + (y - size // 2) ** 2) / (2 * sigma**2)),\n        (size, size),\n    )\n    return kernel / np.sum(kernel)\ndef gaussian_blur(image, kernel_size, sigma):\n    \"\"\"Apply Gaussian blur to the image.\"\"\"",
+        "detail": "guassianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "gaussian_blur",
+        "kind": 2,
+        "importPath": "guassianFilter",
+        "description": "guassianFilter",
+        "peekOfCode": "def gaussian_blur(image, kernel_size, sigma):\n    \"\"\"Apply Gaussian blur to the image.\"\"\"\n    kernel = gaussian_kernel(kernel_size, sigma)\n    return convolve(image, kernel)\nimage_path = \"data/RGB data/Defective/IMG20230519180913.jpg\"\noriginal_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)",
+        "detail": "guassianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "guassianFilter",
+        "description": "guassianFilter",
+        "peekOfCode": "image_path = \"data/RGB data/Defective/IMG20230519180913.jpg\"\noriginal_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)\n    plt.figure(figsize=(10, 5))\n    plt.subplot(1, 2, 1)\n    plt.imshow(original_image, cmap=\"gray\")\n    plt.title(\"Original Image\")",
+        "detail": "guassianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "original_image",
+        "kind": 5,
+        "importPath": "guassianFilter",
+        "description": "guassianFilter",
+        "peekOfCode": "original_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)\n    plt.figure(figsize=(10, 5))\n    plt.subplot(1, 2, 1)\n    plt.imshow(original_image, cmap=\"gray\")\n    plt.title(\"Original Image\")\n    plt.subplot(1, 2, 2)",
+        "detail": "guassianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "kind": 2,
+        "importPath": "histogramEqualizer",
+        "description": "histogramEqualizer",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:",
+        "detail": "histogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "histogramEqualizer",
+        "description": "histogramEqualizer",
+        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)",
+        "detail": "histogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "histogramEqualizer",
+        "description": "histogramEqualizer",
+        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap=\"gray\")\n    plt.title(\"Original Image\")\n    plt.subplot(1, 2, 2)",
+        "detail": "histogramEqualizer",
+        "documentation": {}
+    }
+]
