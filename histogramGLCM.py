@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from skimage import io, color, img_as_ubyte
 from skimage.feature import graycomatrix, graycoprops
+from skimage.exposure import equalize_hist
 from tqdm import tqdm
 
 
@@ -11,8 +12,11 @@ def calculate_glcm(image):
     # Convert image to grayscale
     gray_image = color.rgb2gray(image)
 
+    # Equalize histogram
+    equalized_image = equalize_hist(gray_image)
+
     # Convert to uint8 for GLCM computation
-    gray_image = img_as_ubyte(gray_image)
+    equalized_image = img_as_ubyte(equalized_image)
 
     # Define GLCM properties
     distances = [1, 2, 3]  # Distances for co-occurrence matrix
@@ -20,7 +24,7 @@ def calculate_glcm(image):
 
     # Calculate GLCM
     glcm = graycomatrix(
-        gray_image, distances=distances, angles=angles, symmetric=True, normed=True
+        equalized_image, distances=distances, angles=angles, symmetric=True, normed=True
     )
 
     # Calculate GLCM properties
@@ -93,14 +97,15 @@ test_df = pd.DataFrame(
 test_df["Label"] = test_labels
 
 # Save the DataFrames to CSV files
-train_csv = "train.csv"
-val_csv = "val.csv"
-test_csv = "test.csv"
+train_csv = "histogramTrain.csv"
+val_csv = "histogramVal.csv"
+test_csv = "histogramTest.csv"
 
 train_df.to_csv(train_csv, index=False)
 val_df.to_csv(val_csv, index=False)
 test_df.to_csv(test_csv, index=False)
 
-print("Train CSV saved to:", train_csv)
-print("Val CSV saved to:", val_csv)
-print("Test CSV saved to:", test_csv)
+print("Histogram Equalized GLCM features saved to:")
+print("Train CSV:", train_csv)
+print("Val CSV:", val_csv)
+print("Test CSV:", test_csv)

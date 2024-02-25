@@ -18,6 +18,111 @@
         "documentation": {}
     },
     {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "KNeighborsClassifier",
+        "importPath": "sklearn.neighbors",
+        "description": "sklearn.neighbors",
+        "isExtraImport": true,
+        "detail": "sklearn.neighbors",
+        "documentation": {}
+    },
+    {
+        "label": "KNeighborsClassifier",
+        "importPath": "sklearn.neighbors",
+        "description": "sklearn.neighbors",
+        "isExtraImport": true,
+        "detail": "sklearn.neighbors",
+        "documentation": {}
+    },
+    {
+        "label": "RandomForestClassifier",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "RandomForestClassifier",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "SVC",
+        "importPath": "sklearn.svm",
+        "description": "sklearn.svm",
+        "isExtraImport": true,
+        "detail": "sklearn.svm",
+        "documentation": {}
+    },
+    {
+        "label": "SVC",
+        "importPath": "sklearn.svm",
+        "description": "sklearn.svm",
+        "isExtraImport": true,
+        "detail": "sklearn.svm",
+        "documentation": {}
+    },
+    {
+        "label": "LinearDiscriminantAnalysis",
+        "importPath": "sklearn.discriminant_analysis",
+        "description": "sklearn.discriminant_analysis",
+        "isExtraImport": true,
+        "detail": "sklearn.discriminant_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "LinearDiscriminantAnalysis",
+        "importPath": "sklearn.discriminant_analysis",
+        "description": "sklearn.discriminant_analysis",
+        "isExtraImport": true,
+        "detail": "sklearn.discriminant_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -36,12 +141,27 @@
         "documentation": {}
     },
     {
-        "label": "pandas",
-        "kind": 6,
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
         "isExtraImport": true,
-        "importPath": "pandas",
-        "description": "pandas",
-        "detail": "pandas",
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
         "documentation": {}
     },
     {
@@ -85,6 +205,30 @@
         "documentation": {}
     },
     {
+        "label": "graycomatrix",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "graycoprops",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
         "label": "tqdm",
         "importPath": "tqdm",
         "description": "tqdm",
@@ -98,6 +242,14 @@
         "description": "scipy.ndimage",
         "isExtraImport": true,
         "detail": "scipy.ndimage",
+        "documentation": {}
+    },
+    {
+        "label": "equalize_hist",
+        "importPath": "skimage.exposure",
+        "description": "skimage.exposure",
+        "isExtraImport": true,
+        "detail": "skimage.exposure",
         "documentation": {}
     },
     {
@@ -128,6 +280,339 @@
         "documentation": {}
     },
     {
+        "label": "train_csv",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "train_csv = \"train.csv\"\ntest_csv = \"test.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "test_csv",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "test_csv = \"test.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "train_df",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "train_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "test_df",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "test_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "label_encoder",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "label_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "train_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "train_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "test_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "test_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "X_train",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "X_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "y_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "X_test",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "X_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "y_test",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "y_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "classifiers",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "classifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "results = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    results[name] = accuracy\n    print(f\"{name} Accuracy: {accuracy}\")\n# Save results to a DataFrame\nresults_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "results_df",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"resultsWithTrain.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "results_df.index.name",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"resultsWithTrain.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "results_csv",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "results_csv = \"resultsWithTrain.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "train_csv",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "train_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"\ntrain_df = pd.read_csv(train_csv)\nval_df = pd.read_csv(val_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\nval_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "val_csv",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "val_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"\ntrain_df = pd.read_csv(train_csv)\nval_df = pd.read_csv(val_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\nval_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "test_csv",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "test_csv = \"histogramTest.csv\"\ntrain_df = pd.read_csv(train_csv)\nval_df = pd.read_csv(val_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\nval_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "train_df",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "train_df = pd.read_csv(train_csv)\nval_df = pd.read_csv(val_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\nval_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "val_df",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "val_df = pd.read_csv(val_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\nval_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "test_df",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "test_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\nval_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_val = val_df.drop(\"Label\", axis=1)",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "label_encoder",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "label_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\nval_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_val = val_df.drop(\"Label\", axis=1)\ny_val = val_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "train_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "train_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\nval_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_val = val_df.drop(\"Label\", axis=1)\ny_val = val_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "val_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "val_df[\"Label\"] = label_encoder.transform(val_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_val = val_df.drop(\"Label\", axis=1)\ny_val = val_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "test_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "test_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_val = val_df.drop(\"Label\", axis=1)\ny_val = val_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "X_train",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "X_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_val = val_df.drop(\"Label\", axis=1)\ny_val = val_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "y_train",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "y_train = train_df[\"Label\"]\nX_val = val_df.drop(\"Label\", axis=1)\ny_val = val_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "X_val",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "X_val = val_df.drop(\"Label\", axis=1)\ny_val = val_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "y_val",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "y_val = val_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "X_test",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "X_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "y_test",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "y_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "classifiers",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "classifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "results = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_val)\n    val_accuracy = accuracy_score(y_val, y_pred)\n    # Now train on train + val and test on test\n    X_train_full = pd.concat([X_train, X_val], axis=0)\n    y_train_full = pd.concat([y_train, y_val], axis=0)\n    clf.fit(X_train_full, y_train_full)\n    y_pred_test = clf.predict(X_test)",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "results_df",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "results_df = pd.DataFrame.from_dict(\n    results, orient=\"index\", columns=[\"Validation Accuracy\", \"Test Accuracy\"]\n)\nresults_df.index.name = \"Classifier\"\nresults_csv = \"resultsWithHistogramTrainVal.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "results_df.index.name",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"resultsWithHistogramTrainVal.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
+        "label": "results_csv",
+        "kind": 5,
+        "importPath": "classificationWithTrainVal",
+        "description": "classificationWithTrainVal",
+        "peekOfCode": "results_csv = \"resultsWithHistogramTrainVal.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "detail": "classificationWithTrainVal",
+        "documentation": {}
+    },
+    {
         "label": "calculate_glcm",
         "kind": 2,
         "importPath": "glcm",
@@ -141,7 +626,7 @@
         "kind": 2,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "def load_images_and_extract_features(folder):\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                features.append(calculate_glcm(image))\n                labels.append(class_folder)  # Use folder name as label\n# Load images and extract features",
+        "peekOfCode": "def load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                features.append(calculate_glcm(image))",
         "detail": "glcm",
         "documentation": {}
     },
@@ -150,52 +635,88 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "thermal_folder = \"data/Thermal imaging\"\n# List to store features and labels\nfeatures = []  # Features\nlabels = []  # Labels\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):",
+        "peekOfCode": "thermal_folder = \"data/Thermal imaging\"\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):",
         "detail": "glcm",
         "documentation": {}
     },
     {
-        "label": "features",
+        "label": "train_df",
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "features = []  # Features\nlabels = []  # Labels\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels",
         "detail": "glcm",
         "documentation": {}
     },
     {
-        "label": "labels",
+        "label": "train_df[\"Label\"]",
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "labels = []  # Labels\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                features.append(calculate_glcm(image))",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)",
         "detail": "glcm",
         "documentation": {}
     },
     {
-        "label": "df",
+        "label": "val_df",
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "df = pd.DataFrame(\n    features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ndf[\"Label\"] = labels\n# Save the DataFrame to a CSV file\noutput_csv = \"glcm_features.csv\"\ndf.to_csv(output_csv, index=False)\nprint(\"GLCM features saved to:\", output_csv)",
+        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels",
         "detail": "glcm",
         "documentation": {}
     },
     {
-        "label": "df[\"Label\"]",
+        "label": "val_df[\"Label\"]",
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "df[\"Label\"] = labels\n# Save the DataFrame to a CSV file\noutput_csv = \"glcm_features.csv\"\ndf.to_csv(output_csv, index=False)\nprint(\"GLCM features saved to:\", output_csv)",
+        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"",
         "detail": "glcm",
         "documentation": {}
     },
     {
-        "label": "output_csv",
+        "label": "test_df",
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "output_csv = \"glcm_features.csv\"\ndf.to_csv(output_csv, index=False)\nprint(\"GLCM features saved to:\", output_csv)",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "test_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "train_csv",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "train_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "val_csv",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "val_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "test_csv",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "test_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
         "detail": "glcm",
         "documentation": {}
     },
@@ -260,6 +781,114 @@
         "description": "histogramEqualizer",
         "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap=\"gray\")\n    plt.title(\"Original Image\")\n    plt.subplot(1, 2, 2)",
         "detail": "histogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_glcm",
+        "kind": 2,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "def calculate_glcm(image):\n    # Convert image to grayscale\n    gray_image = color.rgb2gray(image)\n    # Equalize histogram\n    equalized_image = equalize_hist(gray_image)\n    # Convert to uint8 for GLCM computation\n    equalized_image = img_as_ubyte(equalized_image)\n    # Define GLCM properties\n    distances = [1, 2, 3]  # Distances for co-occurrence matrix\n    angles = [0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]  # Angles for co-occurrence matrix",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "load_images_and_extract_features",
+        "kind": 2,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "def load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                features.append(calculate_glcm(image))",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "thermal_folder",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "thermal_folder = \"data/Thermal imaging\"\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "train_df",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "train_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "val_df",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "val_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "test_df",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"\ntrain_df.to_csv(train_csv, index=False)",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "test_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Histogram Equalized GLCM features saved to:\")\nprint(\"Train CSV:\", train_csv)",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "train_csv",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "train_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Histogram Equalized GLCM features saved to:\")\nprint(\"Train CSV:\", train_csv)\nprint(\"Val CSV:\", val_csv)\nprint(\"Test CSV:\", test_csv)",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "val_csv",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "val_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Histogram Equalized GLCM features saved to:\")\nprint(\"Train CSV:\", train_csv)\nprint(\"Val CSV:\", val_csv)\nprint(\"Test CSV:\", test_csv)",
+        "detail": "histogramGLCM",
+        "documentation": {}
+    },
+    {
+        "label": "test_csv",
+        "kind": 5,
+        "importPath": "histogramGLCM",
+        "description": "histogramGLCM",
+        "peekOfCode": "test_csv = \"histogramTest.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Histogram Equalized GLCM features saved to:\")\nprint(\"Train CSV:\", train_csv)\nprint(\"Val CSV:\", val_csv)\nprint(\"Test CSV:\", test_csv)",
+        "detail": "histogramGLCM",
         "documentation": {}
     },
     {
