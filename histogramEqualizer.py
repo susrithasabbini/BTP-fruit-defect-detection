@@ -7,10 +7,10 @@ def load_image(image_path):
     return img
 
 
-# image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'
+image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'
 # image_path = "data/RGB data/Raw/IMG20230703125745.jpg"
 # image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'
-image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'
+# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'
 
 
 img = load_image(image_path)

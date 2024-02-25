@@ -5,8 +5,8 @@ def load_image(image_path):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     return img
 
-# image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'
-image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'
+image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'
+# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'
 
 
 img = load_image(image_path)

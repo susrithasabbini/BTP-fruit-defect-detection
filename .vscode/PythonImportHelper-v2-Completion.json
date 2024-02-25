@@ -18,6 +18,15 @@
         "documentation": {}
     },
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "numpy",
         "kind": 6,
         "isExtraImport": true,
@@ -27,11 +36,167 @@
         "documentation": {}
     },
     {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "graycomatrix",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "graycoprops",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
         "label": "convolve",
         "importPath": "scipy.ndimage",
         "description": "scipy.ndimage",
         "isExtraImport": true,
         "detail": "scipy.ndimage",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "kind": 2,
+        "importPath": "adaptiveHistogramEqualizer",
+        "description": "adaptiveHistogramEqualizer",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))\n    adaptive_equalized_img = clahe.apply(img)",
+        "detail": "adaptiveHistogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "adaptiveHistogramEqualizer",
+        "description": "adaptiveHistogramEqualizer",
+        "peekOfCode": "image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))\n    adaptive_equalized_img = clahe.apply(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')",
+        "detail": "adaptiveHistogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "adaptiveHistogramEqualizer",
+        "description": "adaptiveHistogramEqualizer",
+        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))\n    adaptive_equalized_img = clahe.apply(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')",
+        "detail": "adaptiveHistogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_glcm",
+        "kind": 2,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "def calculate_glcm(image):\n    # Convert image to grayscale\n    gray_image = color.rgb2gray(image)\n    # Convert to uint8 for GLCM computation\n    gray_image = img_as_ubyte(gray_image)\n    # Define GLCM properties\n    distances = [1, 2, 3]  # Distances for co-occurrence matrix\n    angles = [0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]  # Angles for co-occurrence matrix\n    # Calculate GLCM\n    glcm = graycomatrix(",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "load_images_and_extract_features",
+        "kind": 2,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "def load_images_and_extract_features(folder):\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                features.append(calculate_glcm(image))\n                labels.append(class_folder)  # Use folder name as label\n# Load images and extract features",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "thermal_folder",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "thermal_folder = \"data/Thermal imaging\"\n# List to store features and labels\nfeatures = []  # Features\nlabels = []  # Labels\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "features",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "features = []  # Features\nlabels = []  # Labels\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "labels",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "labels = []  # Labels\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                features.append(calculate_glcm(image))",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "df = pd.DataFrame(\n    features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ndf[\"Label\"] = labels\n# Save the DataFrame to a CSV file\noutput_csv = \"glcm_features.csv\"\ndf.to_csv(output_csv, index=False)\nprint(\"GLCM features saved to:\", output_csv)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "df[\"Label\"] = labels\n# Save the DataFrame to a CSV file\noutput_csv = \"glcm_features.csv\"\ndf.to_csv(output_csv, index=False)\nprint(\"GLCM features saved to:\", output_csv)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "output_csv",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "output_csv = \"glcm_features.csv\"\ndf.to_csv(output_csv, index=False)\nprint(\"GLCM features saved to:\", output_csv)",
+        "detail": "glcm",
         "documentation": {}
     },
     {
@@ -75,7 +240,7 @@
         "kind": 2,
         "importPath": "histogramEqualizer",
         "description": "histogramEqualizer",
-        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")",
         "detail": "histogramEqualizer",
         "documentation": {}
     },
@@ -84,7 +249,7 @@
         "kind": 5,
         "importPath": "histogramEqualizer",
         "description": "histogramEqualizer",
-        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)",
+        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))",
         "detail": "histogramEqualizer",
         "documentation": {}
     },
@@ -95,6 +260,60 @@
         "description": "histogramEqualizer",
         "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap=\"gray\")\n    plt.title(\"Original Image\")\n    plt.subplot(1, 2, 2)",
         "detail": "histogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "kind": 2,
+        "importPath": "medianFilter",
+        "description": "medianFilter",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)",
+        "detail": "medianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "medianFilter",
+        "description": "medianFilter",
+        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')",
+        "detail": "medianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "medianFilter",
+        "description": "medianFilter",
+        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')\n    plt.subplot(1, 2, 2)",
+        "detail": "medianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "kind": 2,
+        "importPath": "nlmDenoisingFilter",
+        "description": "nlmDenoisingFilter",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))",
+        "detail": "nlmDenoisingFilter",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "nlmDenoisingFilter",
+        "description": "nlmDenoisingFilter",
+        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')",
+        "detail": "nlmDenoisingFilter",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "nlmDenoisingFilter",
+        "description": "nlmDenoisingFilter",
+        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')\n    plt.subplot(1, 2, 2)",
+        "detail": "nlmDenoisingFilter",
         "documentation": {}
     }
 ]
