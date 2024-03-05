@@ -1,0 +1,83 @@
+dissimilarity
+Classifier,Accuracy
+KNN,0.36363636363636365
+Random Forest,0.30303030303030304
+SVM,0.36363636363636365
+LDA,0.3333333333333333
+
+
+contrast
+KNN Accuracy: 0.45454545454545453
+Random Forest Accuracy: 0.48484848484848486
+SVM Accuracy: 0.3333333333333333
+LDA Accuracy: 0.30303030303030304
+
+
+homogenity
+KNN Accuracy: 0.36363636363636365
+Random Forest Accuracy: 0.2727272727272727
+SVM Accuracy: 0.2727272727272727
+LDA Accuracy: 0.3333333333333333
+
+
+Energy
+KNN Accuracy: 0.3333333333333333
+Random Forest Accuracy: 0.42424242424242425
+SVM Accuracy: 0.2727272727272727
+LDA Accuracy: 0.30303030303030304
+
+Corelation
+KNN Accuracy: 0.5151515151515151
+Random Forest Accuracy: 0.36363636363636365
+SVM Accuracy: 0.2727272727272727
+LDA Accuracy: 0.3939393939393939
+
+
+Corelation and contrast
+KNN Accuracy: 0.45454545454545453
+Random Forest Accuracy: 0.6666666666666666
+SVM Accuracy: 0.3333333333333333
+LDA Accuracy: 0.36363636363636365
+
+
+
+Contrast and energy , corelation
+KNN Accuracy: 0.45454545454545453
+Random Forest Accuracy: 0.3939393939393939
+SVM Accuracy: 0.3333333333333333
+LDA Accuracy: 0.30303030303030304
+
+
+
+Contrast and energy , corelation
+KNN,0.45454545454545453
+Random Forest,0.5454545454545454
+SVM,0.3333333333333333
+LDA,0.3939393939393939
+
+
+
+Whole combined dataset(80:20) 
+
+contrast correlation
+KNN Accuracy: 0.5
+Random Forest Accuracy: 0.5384615384615384
+SVM Accuracy: 0.46153846153846156
+LDA Accuracy: 0.4807692307692308
+
+
+
+RGB (60:40) contrast correlation
+KNN Accuracy: 0.8181818181818182
+Random Forest Accuracy: 0.7272727272727273
+SVM Accuracy: 0.8181818181818182
+LDA Accuracy: 0.8181818181818182
+
+RGB (60:40) (All features)
+KNN Accuracy: 0.8181818181818182
+Random Forest Accuracy: 0.7272727272727273
+SVM Accuracy: 0.8181818181818182
+LDA Accuracy: 0.7272727272727273
+
+
+

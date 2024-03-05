@@ -7,17 +7,11 @@ from sklearn.svm import SVC
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.metrics import accuracy_score
 
-# Load CSV files
-train_csv = "train.csv"
-test_csv = "test.csv"
-# val_csv = "val.csv"
+ripened_csv = "dataset_RGB.csv"
 
-train_df = pd.read_csv(train_csv)
-test_df = pd.read_csv(test_csv)
-# val_df = pd.read_csv(val_csv)
+ripened_df = pd.read_csv(ripened_csv)
 
-# Combine all three datasets
-combined_df = pd.concat([train_df, test_df], ignore_index=True)
+combined_df = pd.concat([ripened_df], ignore_index=True)
 
 # Encode labels
 label_encoder = LabelEncoder()
@@ -28,7 +22,7 @@ X = combined_df.drop("Label", axis=1)
 y = combined_df["Label"]
 
 # Perform 80:20 train-test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
 
 # Initialize classifiers
 classifiers = {
@@ -50,6 +44,6 @@ for name, clf in classifiers.items():
 # Save results to a DataFrame
 results_df = pd.DataFrame.from_dict(results, orient="index", columns=["Accuracy"])
 results_df.index.name = "Classifier"
-results_csv = "resultsWithTrain.csv"
+results_csv = "resultsWithDataset(RGB).csv"
 results_df.to_csv(results_csv)
 print(f"Results saved to {results_csv}")

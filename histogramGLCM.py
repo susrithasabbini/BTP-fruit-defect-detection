@@ -29,19 +29,19 @@ def calculate_glcm(image):
 
     # Calculate GLCM properties
     contrast = graycoprops(glcm, "contrast")
-    dissimilarity = graycoprops(glcm, "dissimilarity")
-    homogeneity = graycoprops(glcm, "homogeneity")
-    energy = graycoprops(glcm, "energy")
-    correlation = graycoprops(glcm, "correlation")
+    # dissimilarity = graycoprops(glcm, "dissimilarity")
+    # homogeneity = graycoprops(glcm, "homogeneity")
+    # energy = graycoprops(glcm, "energy")
+    # correlation = graycoprops(glcm, "correlation")
 
     # Return GLCM features as a 1D array
     return np.array(
         [
             contrast.mean(),
-            dissimilarity.mean(),
-            homogeneity.mean(),
-            energy.mean(),
-            correlation.mean(),
+            # dissimilarity.mean(),
+            # homogeneity.mean(),
+            # energy.mean(),
+            # correlation.mean(),
         ]
     )
 
@@ -80,19 +80,22 @@ test_features, test_labels = load_images_and_extract_features(
 # Create DataFrames for train, val, and test sets
 train_df = pd.DataFrame(
     train_features,
-    columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
+    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
+    columns=["Contrast"],
 )
 train_df["Label"] = train_labels
 
 val_df = pd.DataFrame(
     val_features,
-    columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
+        # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
+    columns=["Contrast"],
 )
 val_df["Label"] = val_labels
 
 test_df = pd.DataFrame(
     test_features,
-    columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
+        # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
+    columns=["Contrast"],
 )
 test_df["Label"] = test_labels
 
