@@ -5,7 +5,6 @@ from skimage import io, color, img_as_ubyte
 from skimage.feature import graycomatrix, graycoprops
 from tqdm import tqdm
 
-
 # Function to calculate GLCM features
 def calculate_glcm(image):
     # Convert image to grayscale
@@ -25,26 +24,21 @@ def calculate_glcm(image):
 
     # Calculate GLCM properties
     contrast = graycoprops(glcm, "contrast")
-    # dissimilarity = graycoprops(glcm, "dissimilarity")
-    # homogeneity = graycoprops(glcm, "homogeneity")
-    # energy = graycoprops(glcm, "energy")
     correlation = graycoprops(glcm, "correlation")
+    dissimilarity = graycoprops(glcm, "dissimilarity")
+    homogeneity = graycoprops(glcm, "homogeneity")
+    energy = graycoprops(glcm, "energy")
 
     # Return GLCM features as a 1D array
     return np.array(
         [
             contrast.mean(),
-            # dissimilarity.mean(),
-            # homogeneity.mean(),
-            # energy.mean(),
             correlation.mean(),
+            dissimilarity.mean(),
+            homogeneity.mean(),
+            energy.mean(),
         ]
     )
-
-
-# Path to the thermal images folders
-thermal_folder = "data/Thermal imaging"
-
 
 # Function to load images and extract features
 def load_images_and_extract_features(folder):
@@ -61,58 +55,40 @@ def load_images_and_extract_features(folder):
 
     return features, labels
 
+# Modify the RGB data folder path
+rgb_folder = "data/RGB data"
+
+# Load images and extract features for Defective, Raw, and Ripened folders
 
 # Load images and extract features for train, val, and test folders
 train_features, train_labels = load_images_and_extract_features(
-    os.path.join(thermal_folder, "train")
-)
-val_features, val_labels = load_images_and_extract_features(
-    os.path.join(thermal_folder, "val")
+    os.path.join(rgb_folder, "train")
 )
 test_features, test_labels = load_images_and_extract_features(
-    os.path.join(thermal_folder, "test")
+    os.path.join(rgb_folder, "test")
 )
+
 
 # Create DataFrames for train, val, and test sets
 train_df = pd.DataFrame(
     train_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation","Contrast"],
+    columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
 )
 train_df["Label"] = train_labels
 
-val_df = pd.DataFrame(
-    val_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation","Contrast"],
-)
-val_df["Label"] = val_labels
-
 test_df = pd.DataFrame(
     test_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation","Contrast"],
+    columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
 )
 test_df["Label"] = test_labels
 
-# Create DataFrames for train, val, and test sets
-train_df = pd.DataFrame(
-    train_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation","Contrast"],
-)
-train_df["Label"] = train_labels
+# Save the DataFrames to CSV files
+train_csv = "train_RGB.csv"
+test_csv = "test_RGB.csv"
 
-val_df = pd.DataFrame(
-    val_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation","Contrast"],
-)
-val_df["Label"] = val_labels
+train_df.to_csv(train_csv, index=False)
+test_df.to_csv(test_csv, index=False)
 
-test_df = pd.DataFrame(
-    test_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation","Contrast"],
-)
-test_df["Label"] = test_labels
+print("Train CSV saved to:", train_csv)
+print("Test CSV saved to:", test_csv)
+

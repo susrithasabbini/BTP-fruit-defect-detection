@@ -18,6 +18,23 @@
         "documentation": {}
     },
     {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "convolve",
+        "importPath": "scipy.ndimage",
+        "description": "scipy.ndimage",
+        "isExtraImport": true,
+        "detail": "scipy.ndimage",
+        "documentation": {}
+    },
+    {
         "label": "pandas",
         "kind": 6,
         "isExtraImport": true,
@@ -40,6 +57,14 @@
         "description": "sklearn.preprocessing",
         "isExtraImport": true,
         "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
         "documentation": {}
     },
     {
@@ -132,12 +157,51 @@
         "documentation": {}
     },
     {
-        "label": "numpy",
-        "kind": 6,
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
         "isExtraImport": true,
-        "importPath": "numpy",
-        "description": "numpy",
-        "detail": "numpy",
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
         "documentation": {}
     },
     {
@@ -221,6 +285,46 @@
         "documentation": {}
     },
     {
+        "label": "graycomatrix",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "graycoprops",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "graycomatrix",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "graycoprops",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
         "label": "tqdm",
         "importPath": "tqdm",
         "description": "tqdm",
@@ -237,11 +341,11 @@
         "documentation": {}
     },
     {
-        "label": "convolve",
-        "importPath": "scipy.ndimage",
-        "description": "scipy.ndimage",
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
         "isExtraImport": true,
-        "detail": "scipy.ndimage",
+        "detail": "tqdm",
         "documentation": {}
     },
     {
@@ -255,28 +359,145 @@
     {
         "label": "load_image",
         "kind": 2,
-        "importPath": "adaptiveHistogramEqualizer",
-        "description": "adaptiveHistogramEqualizer",
+        "importPath": "preprocessing.adaptiveHistogramEqualizer",
+        "description": "preprocessing.adaptiveHistogramEqualizer",
         "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))\n    adaptive_equalized_img = clahe.apply(img)",
-        "detail": "adaptiveHistogramEqualizer",
+        "detail": "preprocessing.adaptiveHistogramEqualizer",
         "documentation": {}
     },
     {
         "label": "image_path",
         "kind": 5,
-        "importPath": "adaptiveHistogramEqualizer",
-        "description": "adaptiveHistogramEqualizer",
+        "importPath": "preprocessing.adaptiveHistogramEqualizer",
+        "description": "preprocessing.adaptiveHistogramEqualizer",
         "peekOfCode": "image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))\n    adaptive_equalized_img = clahe.apply(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')",
-        "detail": "adaptiveHistogramEqualizer",
+        "detail": "preprocessing.adaptiveHistogramEqualizer",
         "documentation": {}
     },
     {
         "label": "img",
         "kind": 5,
-        "importPath": "adaptiveHistogramEqualizer",
-        "description": "adaptiveHistogramEqualizer",
+        "importPath": "preprocessing.adaptiveHistogramEqualizer",
+        "description": "preprocessing.adaptiveHistogramEqualizer",
         "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))\n    adaptive_equalized_img = clahe.apply(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')",
-        "detail": "adaptiveHistogramEqualizer",
+        "detail": "preprocessing.adaptiveHistogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "gaussian_kernel",
+        "kind": 2,
+        "importPath": "preprocessing.guassianFilter",
+        "description": "preprocessing.guassianFilter",
+        "peekOfCode": "def gaussian_kernel(size, sigma):\n    \"\"\"Generate a 2D Gaussian kernel.\"\"\"\n    kernel = np.fromfunction(\n        lambda x, y: (1 / (2 * np.pi * sigma**2))\n        * np.exp(-((x - size // 2) ** 2 + (y - size // 2) ** 2) / (2 * sigma**2)),\n        (size, size),\n    )\n    return kernel / np.sum(kernel)\ndef gaussian_blur(image, kernel_size, sigma):\n    \"\"\"Apply Gaussian blur to the image.\"\"\"",
+        "detail": "preprocessing.guassianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "gaussian_blur",
+        "kind": 2,
+        "importPath": "preprocessing.guassianFilter",
+        "description": "preprocessing.guassianFilter",
+        "peekOfCode": "def gaussian_blur(image, kernel_size, sigma):\n    \"\"\"Apply Gaussian blur to the image.\"\"\"\n    kernel = gaussian_kernel(kernel_size, sigma)\n    return convolve(image, kernel)\nimage_path = \"data/RGB data/Defective/IMG20230519180913.jpg\"\noriginal_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)",
+        "detail": "preprocessing.guassianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "preprocessing.guassianFilter",
+        "description": "preprocessing.guassianFilter",
+        "peekOfCode": "image_path = \"data/RGB data/Defective/IMG20230519180913.jpg\"\noriginal_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)\n    plt.figure(figsize=(10, 5))\n    plt.subplot(1, 2, 1)\n    plt.imshow(original_image, cmap=\"gray\")\n    plt.title(\"Original Image\")",
+        "detail": "preprocessing.guassianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "original_image",
+        "kind": 5,
+        "importPath": "preprocessing.guassianFilter",
+        "description": "preprocessing.guassianFilter",
+        "peekOfCode": "original_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)\n    plt.figure(figsize=(10, 5))\n    plt.subplot(1, 2, 1)\n    plt.imshow(original_image, cmap=\"gray\")\n    plt.title(\"Original Image\")\n    plt.subplot(1, 2, 2)",
+        "detail": "preprocessing.guassianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "kind": 2,
+        "importPath": "preprocessing.histogramEqualizer",
+        "description": "preprocessing.histogramEqualizer",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")",
+        "detail": "preprocessing.histogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "preprocessing.histogramEqualizer",
+        "description": "preprocessing.histogramEqualizer",
+        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))",
+        "detail": "preprocessing.histogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "preprocessing.histogramEqualizer",
+        "description": "preprocessing.histogramEqualizer",
+        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap=\"gray\")\n    plt.title(\"Original Image\")\n    plt.subplot(1, 2, 2)",
+        "detail": "preprocessing.histogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "kind": 2,
+        "importPath": "preprocessing.medianFilter",
+        "description": "preprocessing.medianFilter",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)",
+        "detail": "preprocessing.medianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "preprocessing.medianFilter",
+        "description": "preprocessing.medianFilter",
+        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')",
+        "detail": "preprocessing.medianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "preprocessing.medianFilter",
+        "description": "preprocessing.medianFilter",
+        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')\n    plt.subplot(1, 2, 2)",
+        "detail": "preprocessing.medianFilter",
+        "documentation": {}
+    },
+    {
+        "label": "load_image",
+        "kind": 2,
+        "importPath": "preprocessing.nlmDenoisingFilter",
+        "description": "preprocessing.nlmDenoisingFilter",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))",
+        "detail": "preprocessing.nlmDenoisingFilter",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "preprocessing.nlmDenoisingFilter",
+        "description": "preprocessing.nlmDenoisingFilter",
+        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')",
+        "detail": "preprocessing.nlmDenoisingFilter",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "preprocessing.nlmDenoisingFilter",
+        "description": "preprocessing.nlmDenoisingFilter",
+        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')\n    plt.subplot(1, 2, 2)",
+        "detail": "preprocessing.nlmDenoisingFilter",
         "documentation": {}
     },
     {
@@ -284,7 +505,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "train_csv = \"train.csv\"\ntest_csv = \"test.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)",
+        "peekOfCode": "train_csv = \"histogramTrain_RGB.csv\"\ntest_csv = \"histogramTrain_RGB.csv\"\n# val_csv = \"val.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# val_df = pd.read_csv(val_csv)\n# Combine all three datasets\ncombined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -293,7 +514,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "test_csv = \"test.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]",
+        "peekOfCode": "test_csv = \"histogramTrain_RGB.csv\"\n# val_csv = \"val.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# val_df = pd.read_csv(val_csv)\n# Combine all three datasets\ncombined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -302,7 +523,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "train_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)",
+        "peekOfCode": "train_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# val_df = pd.read_csv(val_csv)\n# Combine all three datasets\ncombined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -311,7 +532,16 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "test_df = pd.read_csv(test_csv)\n# Encode labels\nlabel_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]",
+        "peekOfCode": "test_df = pd.read_csv(test_csv)\n# val_df = pd.read_csv(val_csv)\n# Combine all three datasets\ncombined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]",
+        "detail": "classificationWithTrain",
+        "documentation": {}
+    },
+    {
+        "label": "combined_df",
+        "kind": 5,
+        "importPath": "classificationWithTrain",
+        "description": "classificationWithTrain",
+        "peekOfCode": "combined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n# Initialize classifiers",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -320,61 +550,34 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "label_encoder = LabelEncoder()\ntrain_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {",
+        "peekOfCode": "label_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
     {
-        "label": "train_df[\"Label\"]",
+        "label": "combined_df[\"Label\"]",
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "train_df[\"Label\"] = label_encoder.fit_transform(train_df[\"Label\"])\ntest_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),",
+        "peekOfCode": "combined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
     {
-        "label": "test_df[\"Label\"]",
+        "label": "X",
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "test_df[\"Label\"] = label_encoder.transform(test_df[\"Label\"])\n# Separate features and labels\nX_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),",
+        "peekOfCode": "X = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
     {
-        "label": "X_train",
+        "label": "y",
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "X_train = train_df.drop(\"Label\", axis=1)\ny_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),",
-        "detail": "classificationWithTrain",
-        "documentation": {}
-    },
-    {
-        "label": "y_train",
-        "kind": 5,
-        "importPath": "classificationWithTrain",
-        "description": "classificationWithTrain",
-        "peekOfCode": "y_train = train_df[\"Label\"]\nX_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}",
-        "detail": "classificationWithTrain",
-        "documentation": {}
-    },
-    {
-        "label": "X_test",
-        "kind": 5,
-        "importPath": "classificationWithTrain",
-        "description": "classificationWithTrain",
-        "peekOfCode": "X_test = test_df.drop(\"Label\", axis=1)\ny_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers",
-        "detail": "classificationWithTrain",
-        "documentation": {}
-    },
-    {
-        "label": "y_test",
-        "kind": 5,
-        "importPath": "classificationWithTrain",
-        "description": "classificationWithTrain",
-        "peekOfCode": "y_test = test_df[\"Label\"]\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}",
+        "peekOfCode": "y = combined_df[\"Label\"]\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -383,7 +586,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "classifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=5),\n    \"Random Forest\": RandomForestClassifier(n_estimators=100, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)",
+        "peekOfCode": "classifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -401,7 +604,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"resultsWithTrain.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"results/rgb/resultsWithGLCMAndColorAndHistogramEqualizer_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -410,7 +613,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"resultsWithTrain.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"results/rgb/resultsWithGLCMAndColorAndHistogramEqualizer_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -419,7 +622,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "results_csv = \"resultsWithTrain.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_csv = \"results/rgb/resultsWithGLCMAndColorAndHistogramEqualizer_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -644,7 +847,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -653,7 +856,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -662,7 +865,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -671,7 +874,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"",
+        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,",
         "detail": "glcm",
         "documentation": {}
     },
@@ -680,7 +883,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -689,98 +892,233 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)",
+        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,",
         "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "train_df",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "train_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "val_df",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "val_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "test_df",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "test_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "test_df[\"Label\"] = test_labels",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_glcm",
+        "kind": 2,
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "def calculate_glcm(image):\n    # Convert image to grayscale\n    gray_image = color.rgb2gray(image)\n    # Convert to uint8 for GLCM computation\n    gray_image = img_as_ubyte(gray_image)\n    # Define GLCM properties\n    distances = [1, 2, 3]  # Distances for co-occurrence matrix\n    angles = [0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]  # Angles for co-occurrence matrix\n    # Calculate GLCM\n    glcm = graycomatrix(",
+        "detail": "glcmAndColor_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_average_color",
+        "kind": 2,
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "def calculate_average_color(image):\n    # Calculate average RGB values\n    avg_color = np.mean(image, axis=(0, 1))\n    return avg_color\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):",
+        "detail": "glcmAndColor_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "load_images_and_extract_features",
+        "kind": 2,
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "def load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                glcm_features = calculate_glcm(image)",
+        "detail": "glcmAndColor_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "rgb_folder",
+        "kind": 5,
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "rgb_folder = \"data/RGB data\"\n# Load images and extract features for train and test folders\ntrain_features, train_labels = load_images_and_extract_features(\n    os.path.join(rgb_folder, \"train\")\n)\ntest_features, test_labels = load_images_and_extract_features(\n    os.path.join(rgb_folder, \"test\")\n)\n# Create DataFrames for train and test sets\ntrain_df = pd.DataFrame(",
+        "detail": "glcmAndColor_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "train_df",
+        "kind": 5,
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    columns=[\n        \"Contrast\",\n        \"Correlation\",\n        \"Dissimilarity\",\n        \"Homogeneity\",\n        \"Energy\",\n        \"Avg_Red\",\n        \"Avg_Green\",",
+        "detail": "glcmAndColor_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "train_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\n        \"Contrast\",\n        \"Correlation\",\n        \"Dissimilarity\",\n        \"Homogeneity\",\n        \"Energy\",\n        \"Avg_Red\",",
+        "detail": "glcmAndColor_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "test_df",
+        "kind": 5,
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    columns=[\n        \"Contrast\",\n        \"Correlation\",\n        \"Dissimilarity\",\n        \"Homogeneity\",\n        \"Energy\",\n        \"Avg_Red\",\n        \"Avg_Green\",",
+        "detail": "glcmAndColor_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "test_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train_RGB.csv\"\ntest_csv = \"test_RGB.csv\"\ntrain_df.to_csv(train_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcmAndColor_RGB",
         "documentation": {}
     },
     {
         "label": "train_csv",
         "kind": 5,
-        "importPath": "glcm",
-        "description": "glcm",
-        "peekOfCode": "train_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
-        "detail": "glcm",
-        "documentation": {}
-    },
-    {
-        "label": "val_csv",
-        "kind": 5,
-        "importPath": "glcm",
-        "description": "glcm",
-        "peekOfCode": "val_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
-        "detail": "glcm",
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "train_csv = \"train_RGB.csv\"\ntest_csv = \"test_RGB.csv\"\ntrain_df.to_csv(train_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcmAndColor_RGB",
         "documentation": {}
     },
     {
         "label": "test_csv",
         "kind": 5,
-        "importPath": "glcm",
-        "description": "glcm",
-        "peekOfCode": "test_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
-        "detail": "glcm",
+        "importPath": "glcmAndColor_RGB",
+        "description": "glcmAndColor_RGB",
+        "peekOfCode": "test_csv = \"test_RGB.csv\"\ntrain_df.to_csv(train_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcmAndColor_RGB",
         "documentation": {}
     },
     {
-        "label": "gaussian_kernel",
+        "label": "calculate_glcm",
         "kind": 2,
-        "importPath": "guassianFilter",
-        "description": "guassianFilter",
-        "peekOfCode": "def gaussian_kernel(size, sigma):\n    \"\"\"Generate a 2D Gaussian kernel.\"\"\"\n    kernel = np.fromfunction(\n        lambda x, y: (1 / (2 * np.pi * sigma**2))\n        * np.exp(-((x - size // 2) ** 2 + (y - size // 2) ** 2) / (2 * sigma**2)),\n        (size, size),\n    )\n    return kernel / np.sum(kernel)\ndef gaussian_blur(image, kernel_size, sigma):\n    \"\"\"Apply Gaussian blur to the image.\"\"\"",
-        "detail": "guassianFilter",
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "def calculate_glcm(image):\n    # Convert image to grayscale\n    gray_image = color.rgb2gray(image)\n    # Convert to uint8 for GLCM computation\n    gray_image = img_as_ubyte(gray_image)\n    # Define GLCM properties\n    distances = [1, 2, 3]  # Distances for co-occurrence matrix\n    angles = [0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]  # Angles for co-occurrence matrix\n    # Calculate GLCM\n    glcm = graycomatrix(",
+        "detail": "glcm_RGB",
         "documentation": {}
     },
     {
-        "label": "gaussian_blur",
+        "label": "load_images_and_extract_features",
         "kind": 2,
-        "importPath": "guassianFilter",
-        "description": "guassianFilter",
-        "peekOfCode": "def gaussian_blur(image, kernel_size, sigma):\n    \"\"\"Apply Gaussian blur to the image.\"\"\"\n    kernel = gaussian_kernel(kernel_size, sigma)\n    return convolve(image, kernel)\nimage_path = \"data/RGB data/Defective/IMG20230519180913.jpg\"\noriginal_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)",
-        "detail": "guassianFilter",
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "def load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                features.append(calculate_glcm(image))",
+        "detail": "glcm_RGB",
         "documentation": {}
     },
     {
-        "label": "image_path",
+        "label": "rgb_folder",
         "kind": 5,
-        "importPath": "guassianFilter",
-        "description": "guassianFilter",
-        "peekOfCode": "image_path = \"data/RGB data/Defective/IMG20230519180913.jpg\"\noriginal_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)\n    plt.figure(figsize=(10, 5))\n    plt.subplot(1, 2, 1)\n    plt.imshow(original_image, cmap=\"gray\")\n    plt.title(\"Original Image\")",
-        "detail": "guassianFilter",
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "rgb_folder = \"data/RGB data\"\n# Load images and extract features for Defective, Raw, and Ripened folders\n# Load images and extract features for train, val, and test folders\ntrain_features, train_labels = load_images_and_extract_features(\n    os.path.join(rgb_folder, \"train\")\n)\ntest_features, test_labels = load_images_and_extract_features(\n    os.path.join(rgb_folder, \"test\")\n)\n# Create DataFrames for train, val, and test sets",
+        "detail": "glcm_RGB",
         "documentation": {}
     },
     {
-        "label": "original_image",
+        "label": "train_df",
         "kind": 5,
-        "importPath": "guassianFilter",
-        "description": "guassianFilter",
-        "peekOfCode": "original_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\nif original_image is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_image = gaussian_blur(original_image, kernel_size=5, sigma=1.5)\n    plt.figure(figsize=(10, 5))\n    plt.subplot(1, 2, 1)\n    plt.imshow(original_image, cmap=\"gray\")\n    plt.title(\"Original Image\")\n    plt.subplot(1, 2, 2)",
-        "detail": "guassianFilter",
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntrain_df[\"Label\"] = train_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "detail": "glcm_RGB",
         "documentation": {}
     },
     {
-        "label": "load_image",
-        "kind": 2,
-        "importPath": "histogramEqualizer",
-        "description": "histogramEqualizer",
-        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")",
-        "detail": "histogramEqualizer",
-        "documentation": {}
-    },
-    {
-        "label": "image_path",
+        "label": "train_df[\"Label\"]",
         "kind": 5,
-        "importPath": "histogramEqualizer",
-        "description": "histogramEqualizer",
-        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))",
-        "detail": "histogramEqualizer",
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train_RGB.csv\"\ntest_csv = \"test_RGB.csv\"\ntrain_df.to_csv(train_csv, index=False)",
+        "detail": "glcm_RGB",
         "documentation": {}
     },
     {
-        "label": "img",
+        "label": "test_df",
         "kind": 5,
-        "importPath": "histogramEqualizer",
-        "description": "histogramEqualizer",
-        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap=\"gray\")\n    plt.title(\"Original Image\")\n    plt.subplot(1, 2, 2)",
-        "detail": "histogramEqualizer",
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train_RGB.csv\"\ntest_csv = \"test_RGB.csv\"\ntrain_df.to_csv(train_csv, index=False)\ntest_df.to_csv(test_csv, index=False)",
+        "detail": "glcm_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "test_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train_RGB.csv\"\ntest_csv = \"test_RGB.csv\"\ntrain_df.to_csv(train_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcm_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "train_csv",
+        "kind": 5,
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "train_csv = \"train_RGB.csv\"\ntest_csv = \"test_RGB.csv\"\ntrain_df.to_csv(train_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcm_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "test_csv",
+        "kind": 5,
+        "importPath": "glcm_RGB",
+        "description": "glcm_RGB",
+        "peekOfCode": "test_csv = \"test_RGB.csv\"\ntrain_df.to_csv(train_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcm_RGB",
         "documentation": {}
     },
     {
@@ -815,7 +1153,7 @@
         "kind": 5,
         "importPath": "histogramGLCM",
         "description": "histogramGLCM",
-        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n        # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Contrast\"],",
         "detail": "histogramGLCM",
         "documentation": {}
     },
@@ -824,7 +1162,7 @@
         "kind": 5,
         "importPath": "histogramGLCM",
         "description": "histogramGLCM",
-        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n        # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n        # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
         "detail": "histogramGLCM",
         "documentation": {}
     },
@@ -833,7 +1171,7 @@
         "kind": 5,
         "importPath": "histogramGLCM",
         "description": "histogramGLCM",
-        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n        # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n        # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Contrast\"],",
         "detail": "histogramGLCM",
         "documentation": {}
     },
@@ -842,7 +1180,7 @@
         "kind": 5,
         "importPath": "histogramGLCM",
         "description": "histogramGLCM",
-        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"",
+        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n        # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"",
         "detail": "histogramGLCM",
         "documentation": {}
     },
@@ -851,7 +1189,7 @@
         "kind": 5,
         "importPath": "histogramGLCM",
         "description": "histogramGLCM",
-        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"\ntrain_df.to_csv(train_csv, index=False)",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n        # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"histogramTrain.csv\"\nval_csv = \"histogramVal.csv\"\ntest_csv = \"histogramTest.csv\"",
         "detail": "histogramGLCM",
         "documentation": {}
     },
@@ -889,60 +1227,6 @@
         "description": "histogramGLCM",
         "peekOfCode": "test_csv = \"histogramTest.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Histogram Equalized GLCM features saved to:\")\nprint(\"Train CSV:\", train_csv)\nprint(\"Val CSV:\", val_csv)\nprint(\"Test CSV:\", test_csv)",
         "detail": "histogramGLCM",
-        "documentation": {}
-    },
-    {
-        "label": "load_image",
-        "kind": 2,
-        "importPath": "medianFilter",
-        "description": "medianFilter",
-        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)",
-        "detail": "medianFilter",
-        "documentation": {}
-    },
-    {
-        "label": "image_path",
-        "kind": 5,
-        "importPath": "medianFilter",
-        "description": "medianFilter",
-        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')",
-        "detail": "medianFilter",
-        "documentation": {}
-    },
-    {
-        "label": "img",
-        "kind": 5,
-        "importPath": "medianFilter",
-        "description": "medianFilter",
-        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    median_filtered_img = cv2.medianBlur(img, ksize=5)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')\n    plt.subplot(1, 2, 2)",
-        "detail": "medianFilter",
-        "documentation": {}
-    },
-    {
-        "label": "load_image",
-        "kind": 2,
-        "importPath": "nlmDenoisingFilter",
-        "description": "nlmDenoisingFilter",
-        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))",
-        "detail": "nlmDenoisingFilter",
-        "documentation": {}
-    },
-    {
-        "label": "image_path",
-        "kind": 5,
-        "importPath": "nlmDenoisingFilter",
-        "description": "nlmDenoisingFilter",
-        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')",
-        "detail": "nlmDenoisingFilter",
-        "documentation": {}
-    },
-    {
-        "label": "img",
-        "kind": 5,
-        "importPath": "nlmDenoisingFilter",
-        "description": "nlmDenoisingFilter",
-        "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    denoised_img = cv2.fastNlMeansDenoising(img, None, h=10, templateWindowSize=7, searchWindowSize=21)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')\n    plt.subplot(1, 2, 2)",
-        "detail": "nlmDenoisingFilter",
         "documentation": {}
     }
 ]
