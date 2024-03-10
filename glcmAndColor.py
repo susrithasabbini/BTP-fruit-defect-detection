@@ -46,6 +46,14 @@ def calculate_glcm(image):
 thermal_folder = "data/Thermal imaging"
 
 
+# Function to calculate average color (RGB) features
+def calculate_average_color(image):
+    # Calculate average RGB values
+    avg_color = np.mean(image, axis=(0, 1))
+
+    return avg_color
+
+
 # Function to load images and extract features
 def load_images_and_extract_features(folder):
     features = []  # Features
@@ -56,7 +64,12 @@ def load_images_and_extract_features(folder):
         for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):
             if filename.endswith(".jpg") or filename.endswith(".png"):
                 image = io.imread(os.path.join(folder, class_folder, filename))
-                features.append(calculate_glcm(image))
+                glcm_features = calculate_glcm(image)
+                color_features = calculate_average_color(image)
+
+                # Combine GLCM and color features
+                features.append(np.concatenate((glcm_features, color_features)))
+
                 labels.append(class_folder)  # Use folder name as label
 
     return features, labels
@@ -76,44 +89,19 @@ test_features, test_labels = load_images_and_extract_features(
 # Create DataFrames for train, val, and test sets
 train_df = pd.DataFrame(
     train_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation", "Contrast"],
+    columns=["Contrast", "Correlation", "Avg_Red", "Avg_Green", "Avg_Blue"],
 )
 train_df["Label"] = train_labels
 
 val_df = pd.DataFrame(
     val_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation", "Contrast"],
+    columns=["Contrast", "Correlation", "Avg_Red", "Avg_Green", "Avg_Blue"],
 )
 val_df["Label"] = val_labels
 
 test_df = pd.DataFrame(
     test_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation", "Contrast"],
-)
-test_df["Label"] = test_labels
-
-# Create DataFrames for train, val, and test sets
-train_df = pd.DataFrame(
-    train_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation", "Contrast"],
-)
-train_df["Label"] = train_labels
-
-val_df = pd.DataFrame(
-    val_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation", "Contrast"],
-)
-val_df["Label"] = val_labels
-
-test_df = pd.DataFrame(
-    test_features,
-    # columns=["Contrast", "Dissimilarity", "Homogeneity", "Energy", "Correlation"],
-    columns=["Correlation", "Contrast"],
+    columns=["Contrast", "Correlation", "Avg_Red", "Avg_Green", "Avg_Blue"],
 )
 test_df["Label"] = test_labels
 

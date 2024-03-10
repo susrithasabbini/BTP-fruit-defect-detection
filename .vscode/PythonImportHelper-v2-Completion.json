@@ -253,6 +253,62 @@
         "documentation": {}
     },
     {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "graycomatrix",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "graycoprops",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "graycomatrix",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
+        "label": "graycoprops",
+        "importPath": "skimage.feature",
+        "description": "skimage.feature",
+        "isExtraImport": true,
+        "detail": "skimage.feature",
+        "documentation": {}
+    },
+    {
         "label": "graycomatrix",
         "importPath": "skimage.feature",
         "description": "skimage.feature",
@@ -301,19 +357,11 @@
         "documentation": {}
     },
     {
-        "label": "graycomatrix",
-        "importPath": "skimage.feature",
-        "description": "skimage.feature",
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
         "isExtraImport": true,
-        "detail": "skimage.feature",
-        "documentation": {}
-    },
-    {
-        "label": "graycoprops",
-        "importPath": "skimage.feature",
-        "description": "skimage.feature",
-        "isExtraImport": true,
-        "detail": "skimage.feature",
+        "detail": "tqdm",
         "documentation": {}
     },
     {
@@ -505,7 +553,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "train_csv = \"histogramTrain_RGB.csv\"\ntest_csv = \"histogramTrain_RGB.csv\"\n# val_csv = \"val.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# val_df = pd.read_csv(val_csv)\n# Combine all three datasets\ncombined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()",
+        "peekOfCode": "train_csv = \"train.csv\"\ntest_csv = \"test.csv\"\n# val_csv = \"val.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# val_df = pd.read_csv(val_csv)\n# Combine all three datasets\ncombined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -514,7 +562,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "test_csv = \"histogramTrain_RGB.csv\"\n# val_csv = \"val.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# val_df = pd.read_csv(val_csv)\n# Combine all three datasets\ncombined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])",
+        "peekOfCode": "test_csv = \"test.csv\"\n# val_csv = \"val.csv\"\ntrain_df = pd.read_csv(train_csv)\ntest_df = pd.read_csv(test_csv)\n# val_df = pd.read_csv(val_csv)\n# Combine all three datasets\ncombined_df = pd.concat([train_df, test_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -604,7 +652,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"results/rgb/resultsWithGLCMAndColorAndHistogramEqualizer_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"results/thermal/resultsWithGLCMAndColor.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -613,7 +661,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"results/rgb/resultsWithGLCMAndColorAndHistogramEqualizer_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"results/thermal/resultsWithGLCMAndColor.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -622,7 +670,7 @@
         "kind": 5,
         "importPath": "classificationWithTrain",
         "description": "classificationWithTrain",
-        "peekOfCode": "results_csv = \"results/rgb/resultsWithGLCMAndColorAndHistogramEqualizer_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_csv = \"results/thermal/resultsWithGLCMAndColor.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
         "detail": "classificationWithTrain",
         "documentation": {}
     },
@@ -847,7 +895,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -856,7 +904,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -865,7 +913,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],",
+        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -874,7 +922,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,",
+        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,",
         "detail": "glcm",
         "documentation": {}
     },
@@ -883,7 +931,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -892,7 +940,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,",
+        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Create DataFrames for train, val, and test sets\ntrain_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,",
         "detail": "glcm",
         "documentation": {}
     },
@@ -901,7 +949,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -910,7 +958,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -919,7 +967,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],",
+        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],",
         "detail": "glcm",
         "documentation": {}
     },
@@ -928,7 +976,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"",
         "detail": "glcm",
         "documentation": {}
     },
@@ -937,7 +985,7 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\",\"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    # columns=[\"Contrast\", \"Dissimilarity\", \"Homogeneity\", \"Energy\", \"Correlation\"],\n    columns=[\"Correlation\", \"Contrast\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"",
         "detail": "glcm",
         "documentation": {}
     },
@@ -946,8 +994,152 @@
         "kind": 5,
         "importPath": "glcm",
         "description": "glcm",
-        "peekOfCode": "test_df[\"Label\"] = test_labels",
+        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)",
         "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "train_csv",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "train_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "val_csv",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "val_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "test_csv",
+        "kind": 5,
+        "importPath": "glcm",
+        "description": "glcm",
+        "peekOfCode": "test_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcm",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_glcm",
+        "kind": 2,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "def calculate_glcm(image):\n    # Convert image to grayscale\n    gray_image = color.rgb2gray(image)\n    # Convert to uint8 for GLCM computation\n    gray_image = img_as_ubyte(gray_image)\n    # Define GLCM properties\n    distances = [1, 2, 3]  # Distances for co-occurrence matrix\n    angles = [0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]  # Angles for co-occurrence matrix\n    # Calculate GLCM\n    glcm = graycomatrix(",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_average_color",
+        "kind": 2,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "def calculate_average_color(image):\n    # Calculate average RGB values\n    avg_color = np.mean(image, axis=(0, 1))\n    return avg_color\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "load_images_and_extract_features",
+        "kind": 2,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "def load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels\n    for class_folder in os.listdir(folder):\n        if not os.path.isdir(os.path.join(folder, class_folder)):\n            continue  # Skip if not a directory\n        for filename in tqdm(os.listdir(os.path.join(folder, class_folder))):\n            if filename.endswith(\".jpg\") or filename.endswith(\".png\"):\n                image = io.imread(os.path.join(folder, class_folder, filename))\n                glcm_features = calculate_glcm(image)",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "thermal_folder",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "thermal_folder = \"data/Thermal imaging\"\n# Function to calculate average color (RGB) features\ndef calculate_average_color(image):\n    # Calculate average RGB values\n    avg_color = np.mean(image, axis=(0, 1))\n    return avg_color\n# Function to load images and extract features\ndef load_images_and_extract_features(folder):\n    features = []  # Features\n    labels = []  # Labels",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "train_df",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "train_df = pd.DataFrame(\n    train_features,\n    columns=[\"Contrast\", \"Correlation\", \"Avg_Red\", \"Avg_Green\", \"Avg_Blue\"],\n)\ntrain_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Correlation\", \"Avg_Red\", \"Avg_Green\", \"Avg_Blue\"],\n)\nval_df[\"Label\"] = val_labels",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "train_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "train_df[\"Label\"] = train_labels\nval_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Correlation\", \"Avg_Red\", \"Avg_Green\", \"Avg_Blue\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Correlation\", \"Avg_Red\", \"Avg_Green\", \"Avg_Blue\"],\n)",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "val_df",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "val_df = pd.DataFrame(\n    val_features,\n    columns=[\"Contrast\", \"Correlation\", \"Avg_Red\", \"Avg_Green\", \"Avg_Blue\"],\n)\nval_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Correlation\", \"Avg_Red\", \"Avg_Green\", \"Avg_Blue\"],\n)\ntest_df[\"Label\"] = test_labels",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "val_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "val_df[\"Label\"] = val_labels\ntest_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Correlation\", \"Avg_Red\", \"Avg_Green\", \"Avg_Blue\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "test_df",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "test_df = pd.DataFrame(\n    test_features,\n    columns=[\"Contrast\", \"Correlation\", \"Avg_Red\", \"Avg_Green\", \"Avg_Blue\"],\n)\ntest_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "test_df[\"Label\"]",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "test_df[\"Label\"] = test_labels\n# Save the DataFrames to CSV files\ntrain_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "train_csv",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "train_csv = \"train.csv\"\nval_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "val_csv",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "val_csv = \"val.csv\"\ntest_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcmAndColor",
+        "documentation": {}
+    },
+    {
+        "label": "test_csv",
+        "kind": 5,
+        "importPath": "glcmAndColor",
+        "description": "glcmAndColor",
+        "peekOfCode": "test_csv = \"test.csv\"\ntrain_df.to_csv(train_csv, index=False)\nval_df.to_csv(val_csv, index=False)\ntest_df.to_csv(test_csv, index=False)\nprint(\"Train CSV saved to:\", train_csv)\nprint(\"Val CSV saved to:\", val_csv)\nprint(\"Test CSV saved to:\", test_csv)",
+        "detail": "glcmAndColor",
         "documentation": {}
     },
     {
