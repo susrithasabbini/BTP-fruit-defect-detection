@@ -27,6 +27,134 @@
         "documentation": {}
     },
     {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
+        "label": "img_as_ubyte",
+        "importPath": "skimage",
+        "description": "skimage",
+        "isExtraImport": true,
+        "detail": "skimage",
+        "documentation": {}
+    },
+    {
         "label": "convolve",
         "importPath": "scipy.ndimage",
         "description": "scipy.ndimage",
@@ -154,126 +282,6 @@
         "importPath": "os",
         "description": "os",
         "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "io",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "color",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "img_as_ubyte",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "io",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "color",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "img_as_ubyte",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "io",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "color",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "img_as_ubyte",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "io",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "color",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "img_as_ubyte",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "io",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "color",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
-        "documentation": {}
-    },
-    {
-        "label": "img_as_ubyte",
-        "importPath": "skimage",
-        "description": "skimage",
-        "isExtraImport": true,
-        "detail": "skimage",
         "documentation": {}
     },
     {
@@ -429,6 +437,42 @@
         "description": "preprocessing.adaptiveHistogramEqualizer",
         "peekOfCode": "img = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))\n    adaptive_equalized_img = clahe.apply(img)\n    plt.figure(figsize=(12, 6))\n    plt.subplot(1, 2, 1)\n    plt.imshow(img, cmap='gray')\n    plt.title('Original Image')",
         "detail": "preprocessing.adaptiveHistogramEqualizer",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_average_color",
+        "kind": 2,
+        "importPath": "preprocessing.colorExtraction",
+        "description": "preprocessing.colorExtraction",
+        "peekOfCode": "def calculate_average_color(image):\n    # Calculate average RGB values\n    avg_color = np.mean(image, axis=(0, 1))\n    return avg_color\n# Load the image (replace 'image_path.jpg' with the path to your image)\nimage_path = \"background.jpg\"\nimage = io.imread(image_path)\n# Calculate average RGB values using the function\navg_color = calculate_average_color(image)\n# Print the average RGB values",
+        "detail": "preprocessing.colorExtraction",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "preprocessing.colorExtraction",
+        "description": "preprocessing.colorExtraction",
+        "peekOfCode": "image_path = \"background.jpg\"\nimage = io.imread(image_path)\n# Calculate average RGB values using the function\navg_color = calculate_average_color(image)\n# Print the average RGB values\nprint(\"Average Red:\", avg_color[0])\nprint(\"Average Green:\", avg_color[1])\nprint(\"Average Blue:\", avg_color[2])",
+        "detail": "preprocessing.colorExtraction",
+        "documentation": {}
+    },
+    {
+        "label": "image",
+        "kind": 5,
+        "importPath": "preprocessing.colorExtraction",
+        "description": "preprocessing.colorExtraction",
+        "peekOfCode": "image = io.imread(image_path)\n# Calculate average RGB values using the function\navg_color = calculate_average_color(image)\n# Print the average RGB values\nprint(\"Average Red:\", avg_color[0])\nprint(\"Average Green:\", avg_color[1])\nprint(\"Average Blue:\", avg_color[2])",
+        "detail": "preprocessing.colorExtraction",
+        "documentation": {}
+    },
+    {
+        "label": "avg_color",
+        "kind": 5,
+        "importPath": "preprocessing.colorExtraction",
+        "description": "preprocessing.colorExtraction",
+        "peekOfCode": "avg_color = calculate_average_color(image)\n# Print the average RGB values\nprint(\"Average Red:\", avg_color[0])\nprint(\"Average Green:\", avg_color[1])\nprint(\"Average Blue:\", avg_color[2])",
+        "detail": "preprocessing.colorExtraction",
         "documentation": {}
     },
     {
