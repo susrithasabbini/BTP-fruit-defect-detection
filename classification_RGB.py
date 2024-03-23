@@ -59,6 +59,6 @@ for name, clf in classifiers.items():
 # Save results to a DataFrame
 results_df = pd.DataFrame.from_dict(results, orient="index", columns=["Accuracy"])
 results_df.index.name = "Classifier"
-results_csv = "results/rgb/resultsWithGLCMAndColorAndHistogramEqualizer_RGB.csv"
+results_csv = "results/rgb/resultsWithGLCMAndColorOTSU_RGB.csv"
 results_df.to_csv(results_csv)
 print(f"Results saved to {results_csv}")

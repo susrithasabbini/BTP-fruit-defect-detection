@@ -37,7 +37,7 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X_imputed)
 
 # Perform 80:20 train-test split
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=37)
 
 # Initialize classifiers
 classifiers = {
@@ -59,6 +59,6 @@ for name, clf in classifiers.items():
 # Save results to a DataFrame
 results_df = pd.DataFrame.from_dict(results, orient="index", columns=["Accuracy"])
 results_df.index.name = "Classifier"
-results_csv = "results/thermal/resultsWithGLCMAndColorAndHistogramEqualizer.csv"
+results_csv = "results/thermal/resultsWithGLCMAndColorOTSU.csv"
 results_df.to_csv(results_csv)
 print(f"Results saved to {results_csv}")
