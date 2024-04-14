@@ -452,6 +452,120 @@
         "documentation": {}
     },
     {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "keras",
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "isExtraImport": true,
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "keras",
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "isExtraImport": true,
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "Sequential",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Sequential",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Conv2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "MaxPooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Flatten",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Conv2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "MaxPooling2D",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Flatten",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -1403,6 +1517,195 @@
         "description": "classification_RGB",
         "peekOfCode": "results_csv = \"results/rgb/resultsWithGLCMAndColorOTSU_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
         "detail": "classification_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_SIZE",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "IMAGE_SIZE = (64, 64)  # You can adjust this based on your image size\nBATCH_SIZE = 32\nNUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "BATCH_SIZE = 32\nNUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/thermal imaging/train\",",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "NUM_CLASSES",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "NUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/thermal imaging/train\",\n    target_size=IMAGE_SIZE,",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "EPOCHS",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "EPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/thermal imaging/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "train_datagen",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "train_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/thermal imaging/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode=\"categorical\",\n)",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "test_datagen",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "test_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/thermal imaging/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode=\"categorical\",\n)\nvalidation_generator = test_datagen.flow_from_directory(\n    \"./data/thermal imaging/val\",\n    target_size=IMAGE_SIZE,",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "train_generator",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "train_generator = train_datagen.flow_from_directory(\n    \"./data/thermal imaging/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode=\"categorical\",\n)\nvalidation_generator = test_datagen.flow_from_directory(\n    \"./data/thermal imaging/val\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "validation_generator",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "validation_generator = test_datagen.flow_from_directory(\n    \"./data/thermal imaging/val\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode=\"categorical\",\n)\ntest_generator = test_datagen.flow_from_directory(\n    \"./data/thermal imaging/test\",\n    target_size=IMAGE_SIZE,\n    batch_size=1,  # Set batch size to 1 for testing to avoid shuffling",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "test_generator",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "test_generator = test_datagen.flow_from_directory(\n    \"./data/thermal imaging/test\",\n    target_size=IMAGE_SIZE,\n    batch_size=1,  # Set batch size to 1 for testing to avoid shuffling\n    class_mode=\"categorical\",\n    shuffle=False,\n)\n# Model\nmodel = Sequential(\n    [",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "model = Sequential(\n    [\n        Conv2D(\n            32, (3, 3), activation=\"relu\", input_shape=(IMAGE_SIZE[0], IMAGE_SIZE[1], 3)\n        ),\n        MaxPooling2D((2, 2)),\n        Conv2D(64, (3, 3), activation=\"relu\"),\n        MaxPooling2D((2, 2)),\n        Conv2D(128, (3, 3), activation=\"relu\"),\n        MaxPooling2D((2, 2)),",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 5,
+        "importPath": "CNN",
+        "description": "CNN",
+        "peekOfCode": "history = model.fit(\n    train_generator,\n    steps_per_epoch=train_generator.samples // BATCH_SIZE,\n    epochs=EPOCHS,\n    validation_data=validation_generator,\n    validation_steps=validation_generator.samples // BATCH_SIZE,\n)\n# Testing\nloss, accuracy = model.evaluate(test_generator, steps=test_generator.samples)\nprint(f\"Test Accuracy: {accuracy}\")",
+        "detail": "CNN",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_SIZE",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "IMAGE_SIZE = (64, 64)  # You can adjust this based on your image size\nBATCH_SIZE = 32\nNUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "BATCH_SIZE",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "BATCH_SIZE = 32\nNUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "NUM_CLASSES",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "NUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "EPOCHS",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "EPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "train_datagen",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "train_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode=\"categorical\",\n)",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "test_datagen",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "test_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode=\"categorical\",\n)\n# validation_generator = test_datagen.flow_from_directory(\n#     \"./data/RGB data/val\",\n#     target_size=IMAGE_SIZE,",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "train_generator",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "train_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,\n    class_mode=\"categorical\",\n)\n# validation_generator = test_datagen.flow_from_directory(\n#     \"./data/RGB data/val\",\n#     target_size=IMAGE_SIZE,\n#     batch_size=BATCH_SIZE,",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "test_generator",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "test_generator = test_datagen.flow_from_directory(\n    \"./data/RGB data/test\",\n    target_size=IMAGE_SIZE,\n    batch_size=1,  # Set batch size to 1 for testing to avoid shuffling\n    class_mode=\"categorical\",\n    shuffle=False,\n)\n# Model\nmodel = Sequential(\n    [",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "model = Sequential(\n    [\n        Conv2D(\n            32, (3, 3), activation=\"relu\", input_shape=(IMAGE_SIZE[0], IMAGE_SIZE[1], 3)\n        ),\n        MaxPooling2D((2, 2)),\n        Conv2D(64, (3, 3), activation=\"relu\"),\n        MaxPooling2D((2, 2)),\n        Conv2D(128, (3, 3), activation=\"relu\"),\n        MaxPooling2D((2, 2)),",
+        "detail": "CNN_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 5,
+        "importPath": "CNN_RGB",
+        "description": "CNN_RGB",
+        "peekOfCode": "history = model.fit(\n    train_generator,\n    steps_per_epoch=train_generator.samples // BATCH_SIZE,\n    epochs=EPOCHS,\n)\n# Testing\nloss, accuracy = model.evaluate(test_generator, steps=test_generator.samples)\nprint(f\"Test Accuracy: {accuracy}\")\n# save accuracy to csv\nimport csv",
+        "detail": "CNN_RGB",
         "documentation": {}
     },
     {
