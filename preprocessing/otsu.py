@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # read the image
 image = cv2.imread(
-    "../data/RGB data/train/defective/IMG20230519180945_jpg.rf.5ca9a11519bae6b5bf1af3017b426ca8 (2).jpg"
+    "../data/RGB data/test/raw/IMG20230703125745_jpg.rf.1a157bf80a0a09e48380dfdf24630525.jpg"
 )
 
 # convert it to grayscale

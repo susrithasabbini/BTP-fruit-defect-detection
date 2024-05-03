@@ -420,6 +420,30 @@
         "documentation": {}
     },
     {
+        "label": "precision_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "recall_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "f1_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
         "label": "accuracy_score",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
@@ -429,6 +453,38 @@
     },
     {
         "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "recall_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "f1_score",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
         "isExtraImport": true,
@@ -474,6 +530,14 @@
         "description": "tensorflow",
         "isExtraImport": true,
         "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "image",
+        "importPath": "tensorflow.keras.preprocessing",
+        "description": "tensorflow.keras.preprocessing",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.preprocessing",
         "documentation": {}
     },
     {
@@ -894,7 +958,7 @@
         "kind": 2,
         "importPath": "preprocessing.histogramEqualizer",
         "description": "preprocessing.histogramEqualizer",
-        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")",
+        "peekOfCode": "def load_image(image_path):\n    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)\n    return img\nimage_path = \"../data/RGB data/test/defective/IMG20230519180913_jpg.rf.3e5798971b05532ed162e96e4166a5aa (2).jpg\"\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")",
         "detail": "preprocessing.histogramEqualizer",
         "documentation": {}
     },
@@ -903,7 +967,7 @@
         "kind": 5,
         "importPath": "preprocessing.histogramEqualizer",
         "description": "preprocessing.histogramEqualizer",
-        "peekOfCode": "image_path = 'data/RGB data/Defective/IMG20230519180913.jpg'\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))",
+        "peekOfCode": "image_path = \"../data/RGB data/test/defective/IMG20230519180913_jpg.rf.3e5798971b05532ed162e96e4166a5aa (2).jpg\"\n# image_path = \"data/RGB data/Raw/IMG20230703125745.jpg\"\n# image_path ='data/RGB data/Ripened/IMG20230703130447.jpg'\n# image_path = 'data/Thermal imaging/test/defective/Mango_5_jpg.rf.73ebfaf73a2e0a8ee6411ae9c549083a.jpg'\nimg = load_image(image_path)\nif img is None:\n    print(\"Error: Image not loaded. Please check the file path.\")\nelse:\n    equalized_img = cv2.equalizeHist(img)\n    plt.figure(figsize=(12, 6))",
         "detail": "preprocessing.histogramEqualizer",
         "documentation": {}
     },
@@ -975,7 +1039,7 @@
         "kind": 5,
         "importPath": "preprocessing.otsu",
         "description": "preprocessing.otsu",
-        "peekOfCode": "image = cv2.imread(\n    \"../data/RGB data/train/defective/IMG20230519180945_jpg.rf.5ca9a11519bae6b5bf1af3017b426ca8 (2).jpg\"\n)\n# convert it to grayscale\ngray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n# apply the Otsu thresholding method to segment the image\nthreshold_value, threshold_image = cv2.threshold(\n    gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU\n)\n# display the images",
+        "peekOfCode": "image = cv2.imread(\n    \"../data/RGB data/test/raw/IMG20230703125745_jpg.rf.1a157bf80a0a09e48380dfdf24630525.jpg\"\n)\n# convert it to grayscale\ngray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n# apply the Otsu thresholding method to segment the image\nthreshold_value, threshold_image = cv2.threshold(\n    gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU\n)\n# display the images",
         "detail": "preprocessing.otsu",
         "documentation": {}
     },
@@ -1047,7 +1111,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "combined_df = pd.concat([train_df, test_df, val_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy='mean')\nX_imputed = imputer.fit_transform(X)",
+        "peekOfCode": "combined_df = pd.concat([train_df, test_df, val_df], ignore_index=True)\n# Encode labels\nlabel_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy=\"mean\")\nX_imputed = imputer.fit_transform(X)",
         "detail": "classification",
         "documentation": {}
     },
@@ -1056,7 +1120,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "label_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy='mean')\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()",
+        "peekOfCode": "label_encoder = LabelEncoder()\ncombined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy=\"mean\")\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()",
         "detail": "classification",
         "documentation": {}
     },
@@ -1065,7 +1129,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "combined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy='mean')\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)",
+        "peekOfCode": "combined_df[\"Label\"] = label_encoder.fit_transform(combined_df[\"Label\"])\n# Separate features and labels\nX = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy=\"mean\")\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)",
         "detail": "classification",
         "documentation": {}
     },
@@ -1074,7 +1138,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "X = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy='mean')\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=37)",
+        "peekOfCode": "X = combined_df.drop(\"Label\", axis=1)\ny = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy=\"mean\")\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(",
         "detail": "classification",
         "documentation": {}
     },
@@ -1083,7 +1147,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "y = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy='mean')\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=37)\n# Initialize classifiers",
+        "peekOfCode": "y = combined_df[\"Label\"]\n# Impute missing values (NaN) with mean of the column\nimputer = SimpleImputer(strategy=\"mean\")\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X_scaled, y, test_size=0.2, random_state=37",
         "detail": "classification",
         "documentation": {}
     },
@@ -1092,7 +1156,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "imputer = SimpleImputer(strategy='mean')\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=37)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),",
+        "peekOfCode": "imputer = SimpleImputer(strategy=\"mean\")\nX_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X_scaled, y, test_size=0.2, random_state=37\n)\n# Initialize classifiers",
         "detail": "classification",
         "documentation": {}
     },
@@ -1101,7 +1165,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "X_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=37)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),",
+        "peekOfCode": "X_imputed = imputer.fit_transform(X)\n# Scale the features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X_scaled, y, test_size=0.2, random_state=37\n)\n# Initialize classifiers\nclassifiers = {",
         "detail": "classification",
         "documentation": {}
     },
@@ -1110,7 +1174,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "scaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=37)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),",
+        "peekOfCode": "scaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X_scaled, y, test_size=0.2, random_state=37\n)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),",
         "detail": "classification",
         "documentation": {}
     },
@@ -1119,7 +1183,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "X_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=37)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}",
+        "peekOfCode": "X_scaled = scaler.fit_transform(X_imputed)\n# Perform 80:20 train-test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X_scaled, y, test_size=0.2, random_state=37\n)\n# Initialize classifiers\nclassifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),",
         "detail": "classification",
         "documentation": {}
     },
@@ -1128,7 +1192,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "classifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)",
+        "peekOfCode": "classifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}\nprecision = {}\nrecall = {}",
         "detail": "classification",
         "documentation": {}
     },
@@ -1137,7 +1201,34 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "results = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    results[name] = accuracy\n    print(f\"{name} Accuracy: {accuracy}\")\n# Save results to a DataFrame\nresults_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"",
+        "peekOfCode": "results = {}\nprecision = {}\nrecall = {}\nf1 = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    results[name] = accuracy\n    precision[name] = precision_score(y_test, y_pred, average=\"weighted\")",
+        "detail": "classification",
+        "documentation": {}
+    },
+    {
+        "label": "precision",
+        "kind": 5,
+        "importPath": "classification",
+        "description": "classification",
+        "peekOfCode": "precision = {}\nrecall = {}\nf1 = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    results[name] = accuracy\n    precision[name] = precision_score(y_test, y_pred, average=\"weighted\")\n    recall[name] = recall_score(y_test, y_pred, average=\"weighted\")",
+        "detail": "classification",
+        "documentation": {}
+    },
+    {
+        "label": "recall",
+        "kind": 5,
+        "importPath": "classification",
+        "description": "classification",
+        "peekOfCode": "recall = {}\nf1 = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    results[name] = accuracy\n    precision[name] = precision_score(y_test, y_pred, average=\"weighted\")\n    recall[name] = recall_score(y_test, y_pred, average=\"weighted\")\n    f1[name] = f1_score(y_test, y_pred, average=\"weighted\")",
+        "detail": "classification",
+        "documentation": {}
+    },
+    {
+        "label": "f1",
+        "kind": 5,
+        "importPath": "classification",
+        "description": "classification",
+        "peekOfCode": "f1 = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    results[name] = accuracy\n    precision[name] = precision_score(y_test, y_pred, average=\"weighted\")\n    recall[name] = recall_score(y_test, y_pred, average=\"weighted\")\n    f1[name] = f1_score(y_test, y_pred, average=\"weighted\")\n    print(f\"{name} Accuracy: {accuracy}\")",
         "detail": "classification",
         "documentation": {}
     },
@@ -1146,7 +1237,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"results/thermal/resultsWithGLCMAndColorOTSU.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"results/thermal/resultsWithGLCMAndColor.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")\n# Print precision, recall, and F1-score\nprint(\"\\nMetrics:\")\nfor name in classifiers.keys():\n    print(f\"{name}:\")\n    print(f\"  Precision: {precision[name]}\")",
         "detail": "classification",
         "documentation": {}
     },
@@ -1155,7 +1246,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"results/thermal/resultsWithGLCMAndColorOTSU.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"results/thermal/resultsWithGLCMAndColor.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")\n# Print precision, recall, and F1-score\nprint(\"\\nMetrics:\")\nfor name in classifiers.keys():\n    print(f\"{name}:\")\n    print(f\"  Precision: {precision[name]}\")\n    print(f\"  Recall: {recall[name]}\")",
         "detail": "classification",
         "documentation": {}
     },
@@ -1164,7 +1255,7 @@
         "kind": 5,
         "importPath": "classification",
         "description": "classification",
-        "peekOfCode": "results_csv = \"results/thermal/resultsWithGLCMAndColorOTSU.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_csv = \"results/thermal/resultsWithGLCMAndColor.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")\n# Print precision, recall, and F1-score\nprint(\"\\nMetrics:\")\nfor name in classifiers.keys():\n    print(f\"{name}:\")\n    print(f\"  Precision: {precision[name]}\")\n    print(f\"  Recall: {recall[name]}\")\n    print(f\"  F1-score: {f1[name]}\")",
         "detail": "classification",
         "documentation": {}
     },
@@ -1479,7 +1570,7 @@
         "kind": 5,
         "importPath": "classification_RGB",
         "description": "classification_RGB",
-        "peekOfCode": "classifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)",
+        "peekOfCode": "classifiers = {\n    \"KNN\": KNeighborsClassifier(n_neighbors=4),\n    \"Random Forest\": RandomForestClassifier(n_estimators=300, random_state=42),\n    \"SVM\": SVC(kernel=\"linear\", C=1.0, random_state=42),\n    \"LDA\": LinearDiscriminantAnalysis(),\n}\n# Train and evaluate classifiers\nresults = {}\nconfusion_matrices = {}\nfor name, clf in classifiers.items():",
         "detail": "classification_RGB",
         "documentation": {}
     },
@@ -1488,7 +1579,16 @@
         "kind": 5,
         "importPath": "classification_RGB",
         "description": "classification_RGB",
-        "peekOfCode": "results = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    results[name] = accuracy\n    print(f\"{name} Accuracy: {accuracy}\")\n# Save results to a DataFrame\nresults_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"",
+        "peekOfCode": "results = {}\nconfusion_matrices = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    confusion_matrices[name] = confusion_matrix(y_test, y_pred)\n    results[name] = accuracy\n    print(f\"{name} Accuracy: {accuracy}\")\n# Save results to a DataFrame",
+        "detail": "classification_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrices",
+        "kind": 5,
+        "importPath": "classification_RGB",
+        "description": "classification_RGB",
+        "peekOfCode": "confusion_matrices = {}\nfor name, clf in classifiers.items():\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    confusion_matrices[name] = confusion_matrix(y_test, y_pred)\n    results[name] = accuracy\n    print(f\"{name} Accuracy: {accuracy}\")\n# Save results to a DataFrame\nresults_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])",
         "detail": "classification_RGB",
         "documentation": {}
     },
@@ -1497,7 +1597,7 @@
         "kind": 5,
         "importPath": "classification_RGB",
         "description": "classification_RGB",
-        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"results/rgb/resultsWithGLCMAndColorOTSU_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_df = pd.DataFrame.from_dict(results, orient=\"index\", columns=[\"Accuracy\"])\nresults_df.index.name = \"Classifier\"\nresults_csv = \"results/rgb/resultsWithGLCMAndColor_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")\n# Compute precision, recall, and F1-score\nprecision = {}\nrecall = {}\nf1 = {}\nfor name, cm in confusion_matrices.items():",
         "detail": "classification_RGB",
         "documentation": {}
     },
@@ -1506,7 +1606,7 @@
         "kind": 5,
         "importPath": "classification_RGB",
         "description": "classification_RGB",
-        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"results/rgb/resultsWithGLCMAndColorOTSU_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_df.index.name = \"Classifier\"\nresults_csv = \"results/rgb/resultsWithGLCMAndColor_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")\n# Compute precision, recall, and F1-score\nprecision = {}\nrecall = {}\nf1 = {}\nfor name, cm in confusion_matrices.items():\n    y_pred = classifiers[name].predict(X_test)",
         "detail": "classification_RGB",
         "documentation": {}
     },
@@ -1515,8 +1615,107 @@
         "kind": 5,
         "importPath": "classification_RGB",
         "description": "classification_RGB",
-        "peekOfCode": "results_csv = \"results/rgb/resultsWithGLCMAndColorOTSU_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")",
+        "peekOfCode": "results_csv = \"results/rgb/resultsWithGLCMAndColor_RGB.csv\"\nresults_df.to_csv(results_csv)\nprint(f\"Results saved to {results_csv}\")\n# Compute precision, recall, and F1-score\nprecision = {}\nrecall = {}\nf1 = {}\nfor name, cm in confusion_matrices.items():\n    y_pred = classifiers[name].predict(X_test)\n    precision[name] = precision_score(y_test, y_pred, average=\"weighted\")",
         "detail": "classification_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "precision",
+        "kind": 5,
+        "importPath": "classification_RGB",
+        "description": "classification_RGB",
+        "peekOfCode": "precision = {}\nrecall = {}\nf1 = {}\nfor name, cm in confusion_matrices.items():\n    y_pred = classifiers[name].predict(X_test)\n    precision[name] = precision_score(y_test, y_pred, average=\"weighted\")\n    recall[name] = recall_score(y_test, y_pred, average=\"weighted\")\n    f1[name] = f1_score(y_test, y_pred, average=\"weighted\")\n# Print metrics\nprint(\"\\nMetrics:\")",
+        "detail": "classification_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "recall",
+        "kind": 5,
+        "importPath": "classification_RGB",
+        "description": "classification_RGB",
+        "peekOfCode": "recall = {}\nf1 = {}\nfor name, cm in confusion_matrices.items():\n    y_pred = classifiers[name].predict(X_test)\n    precision[name] = precision_score(y_test, y_pred, average=\"weighted\")\n    recall[name] = recall_score(y_test, y_pred, average=\"weighted\")\n    f1[name] = f1_score(y_test, y_pred, average=\"weighted\")\n# Print metrics\nprint(\"\\nMetrics:\")\nfor name in classifiers.keys():",
+        "detail": "classification_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "f1",
+        "kind": 5,
+        "importPath": "classification_RGB",
+        "description": "classification_RGB",
+        "peekOfCode": "f1 = {}\nfor name, cm in confusion_matrices.items():\n    y_pred = classifiers[name].predict(X_test)\n    precision[name] = precision_score(y_test, y_pred, average=\"weighted\")\n    recall[name] = recall_score(y_test, y_pred, average=\"weighted\")\n    f1[name] = f1_score(y_test, y_pred, average=\"weighted\")\n# Print metrics\nprint(\"\\nMetrics:\")\nfor name in classifiers.keys():\n    print(f\"{name}:\")",
+        "detail": "classification_RGB",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "model = tensorflow.keras.models.load_model(\"mango_classification_model_RGB.h5\")\n# Load the defective image\ndefective_image_path = (\n    \"data/RGB data/test/defective/IMG20230519180913_jpg.rf.3e5798971b05532ed162e96e4166a5aa (2).jpg\"  # Update with the path to your defective image\n)\ndefective_img = image.load_img(\n    defective_image_path, target_size=(64, 64)\n)  # Resize as needed\ndefective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)",
+        "detail": "classify",
+        "documentation": {}
+    },
+    {
+        "label": "defective_image_path",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "defective_image_path = (\n    \"data/RGB data/test/defective/IMG20230519180913_jpg.rf.3e5798971b05532ed162e96e4166a5aa (2).jpg\"  # Update with the path to your defective image\n)\ndefective_img = image.load_img(\n    defective_image_path, target_size=(64, 64)\n)  # Resize as needed\ndefective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label",
+        "detail": "classify",
+        "documentation": {}
+    },
+    {
+        "label": "defective_img",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "defective_img = image.load_img(\n    defective_image_path, target_size=(64, 64)\n)  # Resize as needed\ndefective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label\npredicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels",
+        "detail": "classify",
+        "documentation": {}
+    },
+    {
+        "label": "defective_img_array",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "defective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label\npredicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)",
+        "detail": "classify",
+        "documentation": {}
+    },
+    {
+        "label": "defective_img_array",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "defective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label\npredicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\")",
+        "detail": "classify",
+        "documentation": {}
+    },
+    {
+        "label": "predicted_class",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "predicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\")\nplt.axis(\"off\")\nplt.show()",
+        "detail": "classify",
+        "documentation": {}
+    },
+    {
+        "label": "class_label",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "class_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\")\nplt.axis(\"off\")\nplt.show()",
+        "detail": "classify",
+        "documentation": {}
+    },
+    {
+        "label": "class_labels",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "class_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\")\nplt.axis(\"off\")\nplt.show()",
+        "detail": "classify",
         "documentation": {}
     },
     {
@@ -1623,7 +1822,7 @@
         "kind": 5,
         "importPath": "CNN_RGB",
         "description": "CNN_RGB",
-        "peekOfCode": "IMAGE_SIZE = (64, 64)  # You can adjust this based on your image size\nBATCH_SIZE = 32\nNUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(",
+        "peekOfCode": "IMAGE_SIZE = (64, 64)  # You can adjust this based on your image size\nBATCH_SIZE = 16\nNUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 6\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(",
         "detail": "CNN_RGB",
         "documentation": {}
     },
@@ -1632,7 +1831,7 @@
         "kind": 5,
         "importPath": "CNN_RGB",
         "description": "CNN_RGB",
-        "peekOfCode": "BATCH_SIZE = 32\nNUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",",
+        "peekOfCode": "BATCH_SIZE = 16\nNUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 6\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",",
         "detail": "CNN_RGB",
         "documentation": {}
     },
@@ -1641,7 +1840,7 @@
         "kind": 5,
         "importPath": "CNN_RGB",
         "description": "CNN_RGB",
-        "peekOfCode": "NUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,",
+        "peekOfCode": "NUM_CLASSES = 3  # Defective, Raw, Ripened\nEPOCHS = 6\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,",
         "detail": "CNN_RGB",
         "documentation": {}
     },
@@ -1650,7 +1849,7 @@
         "kind": 5,
         "importPath": "CNN_RGB",
         "description": "CNN_RGB",
-        "peekOfCode": "EPOCHS = 20\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,",
+        "peekOfCode": "EPOCHS = 6\n# Data generators\ntrain_datagen = keras.preprocessing.image.ImageDataGenerator(\n    rescale=1.0 / 255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True\n)\ntest_datagen = keras.preprocessing.image.ImageDataGenerator(rescale=1.0 / 255)\ntrain_generator = train_datagen.flow_from_directory(\n    \"./data/RGB data/train\",\n    target_size=IMAGE_SIZE,\n    batch_size=BATCH_SIZE,",
         "detail": "CNN_RGB",
         "documentation": {}
     },

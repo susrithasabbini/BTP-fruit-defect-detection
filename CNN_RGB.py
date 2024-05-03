@@ -5,9 +5,9 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
 # Define constants
 IMAGE_SIZE = (64, 64)  # You can adjust this based on your image size
-BATCH_SIZE = 32
+BATCH_SIZE = 16
 NUM_CLASSES = 3  # Defective, Raw, Ripened
-EPOCHS = 20
+EPOCHS = 6
 
 # Data generators
 train_datagen = keras.preprocessing.image.ImageDataGenerator(

@@ -1,5 +1,5 @@
 Classifier,Accuracy
-KNN,0.359375
-Random Forest,0.5
-SVM,0.3125
-LDA,0.328125
+KNN,0.5625
+Random Forest,0.609375
+SVM,0.53125
+LDA,0.515625
