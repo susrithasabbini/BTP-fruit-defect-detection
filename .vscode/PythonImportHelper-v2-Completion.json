@@ -1651,7 +1651,7 @@
         "kind": 5,
         "importPath": "classify",
         "description": "classify",
-        "peekOfCode": "model = tensorflow.keras.models.load_model(\"mango_classification_model_RGB.h5\")\n# Load the defective image\ndefective_image_path = (\n    \"data/RGB data/test/defective/IMG20230519180913_jpg.rf.3e5798971b05532ed162e96e4166a5aa (2).jpg\"  # Update with the path to your defective image\n)\ndefective_img = image.load_img(\n    defective_image_path, target_size=(64, 64)\n)  # Resize as needed\ndefective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)",
+        "peekOfCode": "model = tf.keras.models.load_model(\"mango_classification_model_RGB.h5\")\n# Load the defective image\ndefective_image_path = (\n    \"data/Thermal imaging/test/Raw/Mango_9_jpg.rf.e993adba2cdfff1033bc0d87847ffc27.jpg\"  # Update with the path to your defective image\n)\ndefective_img = image.load_img(\n    defective_image_path, target_size=(64, 64)\n)  # Resize as needed\ndefective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)",
         "detail": "classify",
         "documentation": {}
     },
@@ -1660,7 +1660,7 @@
         "kind": 5,
         "importPath": "classify",
         "description": "classify",
-        "peekOfCode": "defective_image_path = (\n    \"data/RGB data/test/defective/IMG20230519180913_jpg.rf.3e5798971b05532ed162e96e4166a5aa (2).jpg\"  # Update with the path to your defective image\n)\ndefective_img = image.load_img(\n    defective_image_path, target_size=(64, 64)\n)  # Resize as needed\ndefective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label",
+        "peekOfCode": "defective_image_path = (\n    \"data/Thermal imaging/test/Raw/Mango_9_jpg.rf.e993adba2cdfff1033bc0d87847ffc27.jpg\"  # Update with the path to your defective image\n)\ndefective_img = image.load_img(\n    defective_image_path, target_size=(64, 64)\n)  # Resize as needed\ndefective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label",
         "detail": "classify",
         "documentation": {}
     },
@@ -1678,7 +1678,7 @@
         "kind": 5,
         "importPath": "classify",
         "description": "classify",
-        "peekOfCode": "defective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label\npredicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)",
+        "peekOfCode": "defective_img_array = image.img_to_array(defective_img)\ndefective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label\npredicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Ripened\", 1: \"Ripened\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)",
         "detail": "classify",
         "documentation": {}
     },
@@ -1687,7 +1687,7 @@
         "kind": 5,
         "importPath": "classify",
         "description": "classify",
-        "peekOfCode": "defective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label\npredicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\")",
+        "peekOfCode": "defective_img_array = np.expand_dims(defective_img_array, axis=0)\ndefective_img_array /= 255.0  # Normalize the image\n# Predict the class label\npredicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Ripened\", 1: \"Ripened\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\", loc='left', color='red')",
         "detail": "classify",
         "documentation": {}
     },
@@ -1696,7 +1696,7 @@
         "kind": 5,
         "importPath": "classify",
         "description": "classify",
-        "peekOfCode": "predicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\")\nplt.axis(\"off\")\nplt.show()",
+        "peekOfCode": "predicted_class = model.predict(defective_img_array)\nclass_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Ripened\", 1: \"Ripened\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\", loc='left', color='red')\nplt.axis(\"off\")\n# Example bounding box coordinates (update with actual coordinates)\nx, y, width, height = 10, 10, 44, 44  # Example values",
         "detail": "classify",
         "documentation": {}
     },
@@ -1705,7 +1705,7 @@
         "kind": 5,
         "importPath": "classify",
         "description": "classify",
-        "peekOfCode": "class_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\")\nplt.axis(\"off\")\nplt.show()",
+        "peekOfCode": "class_label = np.argmax(predicted_class)\n# Define class labels\nclass_labels = {0: \"Ripened\", 1: \"Ripened\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\", loc='left', color='red')\nplt.axis(\"off\")\n# Example bounding box coordinates (update with actual coordinates)\nx, y, width, height = 10, 10, 44, 44  # Example values\n# Draw bounding box",
         "detail": "classify",
         "documentation": {}
     },
@@ -1714,7 +1714,16 @@
         "kind": 5,
         "importPath": "classify",
         "description": "classify",
-        "peekOfCode": "class_labels = {0: \"Defective\", 1: \"Raw\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\")\nplt.axis(\"off\")\nplt.show()",
+        "peekOfCode": "class_labels = {0: \"Ripened\", 1: \"Ripened\", 2: \"Ripened\"}  # Update with your class labels\n# Display the image and predicted class label\nplt.imshow(defective_img)\nplt.title(f\"Predicted Class: {class_labels[class_label]}\", loc='left', color='red')\nplt.axis(\"off\")\n# Example bounding box coordinates (update with actual coordinates)\nx, y, width, height = 10, 10, 44, 44  # Example values\n# Draw bounding box\nrect = plt.Rectangle((x, y), width, height, linewidth=2, edgecolor='red', facecolor='none')\nplt.gca().add_patch(rect)",
+        "detail": "classify",
+        "documentation": {}
+    },
+    {
+        "label": "rect",
+        "kind": 5,
+        "importPath": "classify",
+        "description": "classify",
+        "peekOfCode": "rect = plt.Rectangle((x, y), width, height, linewidth=2, edgecolor='red', facecolor='none')\nplt.gca().add_patch(rect)\nplt.show()",
         "detail": "classify",
         "documentation": {}
     },
